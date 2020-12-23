@@ -24,8 +24,8 @@ import io.lettuce.core.api.sync.RedisCommands;
 import io.lettuce.core.cluster.RedisClusterClient;
 import io.lettuce.core.cluster.api.StatefulRedisClusterConnection;
 import io.lettuce.core.cluster.api.sync.RedisAdvancedClusterCommands;
-import org.nervousync.cache.annotation.CacheProviderImpl;
-import org.nervousync.cache.provider.impl.AbstractCacheProvider;
+import org.nervousync.cache.annotation.CacheProvider;
+import org.nervousync.cache.provider.impl.AbstractProvider;
 import org.nervousync.commons.beans.xml.cache.CacheServer;
 import org.nervousync.commons.core.Globals;
 
@@ -36,8 +36,8 @@ import java.util.Vector;
  * @author Steven Wee	<a href="mailto:wmkm0113@Hotmail.com">wmkm0113@Hotmail.com</a>
  * @version $Revision: 1.0 $ $Date: 8/25/2020 4:07 PM $
  */
-@CacheProviderImpl(name = "LettuceProvider", defaultPort = 6379)
-public final class LettuceProviderImpl extends AbstractCacheProvider {
+@CacheProvider(name = "LettuceProvider", defaultPort = 6379)
+public final class LettuceProviderImpl extends AbstractProvider {
 
 	/**
 	 * Is single server mode
